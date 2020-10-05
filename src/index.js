@@ -1,17 +1,8 @@
-// @ts-check
+// @ts-nocheck
 import { model } from './model';
-import { templates } from './templates';
+import { App } from './classes/app';
 import './styles/main.css';
 
-const $site = document.getElementById('site');
+new App(model).init();
 
-model.forEach(block => {
-
-  const toHTML = templates[block.type];
-
-  if(toHTML) {
-     $site.insertAdjacentHTML('beforeend', toHTML(block));
-  }
-
-});
 
