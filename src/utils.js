@@ -8,14 +8,6 @@ export function col(content) {
 
 export function css(styles = {}) {
 
-  /*Вариант 1*/
-  // const keys = Object.keys(styles);
-  // const array = keys.map(key => {
-  //   return `${key}: ${styles[key]}`;
-  // });
-  // return array.join(';'); 
-
-  /* Рефакторинг */
   const toString = key => `${key}: ${styles[key]}`;
   return Object.keys(styles).map(toString).join(';');
 }
