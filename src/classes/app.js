@@ -14,7 +14,7 @@ export class App {
 
     const updateCallback = newBlock => {
       this.model.push(newBlock);
-      site.render(model);
+      site.render(this.model);
     }
 
     new Sidebar('#panel', updateCallback);
